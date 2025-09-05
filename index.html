@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>ShopSmart - Your One-Stop Online Store</title>
+    <meta name="description" content="Shop high-quality products online at ShopSmart. Enjoy a curated catalog, secure checkout, and dedicated support for a seamless e-commerce experience." />
+    <meta name="keywords" content="ecommerce, online shopping, secure checkout, products, ShopSmart" />
+    <meta name="author" content="ShopSmart Web Team" />
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css"/>
+    <!--Replace with your tailwind.css once created-->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet" />
+    <!-- Define your gradient here - use online tools to find a gradient matching your branding-->
+    <style>
+      .gradient {
+        background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
+      }
+      /* Custom image classes for responsive sizing */
+      .logo-img {
+        max-height: 50px;
+        width: auto;
+      }
+      .hero-img {
+        max-width: 600px;
+        width: 100%;
+        height: auto;
+      }
+      .feature-img {
+        max-width: 350px;
+        width: 100%;
+        height: auto;
+      }
+      .catalog-img {
+        max-width: 300px;
+        width: 100%;
+        height: auto;
+      }
+      .checkout-img {
+        max-width: 400px;
+        width: 100%;
+        height: auto;
+      }
+      .account-img, .contact-img, .footer-img {
+        max-width: 300px;
+        width: 100%;
+        height: auto;
+      }
+    </style>
+  </head>
+  <body class="leading-normal tracking-normal text-gray-800" style="font-family: 'Source Sans Pro', sans-serif;">
+    <!--Nav-->
+    <nav id="header" class="fixed w-full z-30 top-0">
+      <div class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-2">
+        <div class="pl-4 flex items-center">
+          <a class="toggleColour flex items-center no-underline hover:no-underline font-bold text-2xl lg:text-4xl" href="#">
+            <!-- Logo image inserted from Unsplash image #1 -->
+            <img src="https://images.unsplash.com/photo-1657812159075-7f0abd98f7b8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3MzQ0MzV8MHwxfHNlYXJjaHwxfHxFLWNvbW1lcmNlfGVufDB8fHx8MTc1NzA4OTQ5NXww&ixlib=rb-4.1.0&q=80&w=1080" alt="ShopSmart Logo" class="logo-img mr-2" />
+            ShopSmart
+          </a>
+        </div>
+        <div class="block lg:hidden pr-4">
+          <button id="nav-toggle" class="flex items-center p-1 text-pink-800 hover:text-gray-900 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+            <svg class="fill-current h-6 w-6" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <title>Menu</title>
+              <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+            </svg>
+          </button>
+        </div>
+        <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden mt-2 lg:mt-0 bg-white lg:bg-transparent text-black p-4 lg:p-0 z-20" id="nav-content">
+          <ul class="list-reset lg:flex justify-end flex-1 items-center">
+            <li class="mr-3">
+              <a class="inline-block py-2 px-4 font-bold no-underline" href="#hero">Home</a>
+            </li>
+            <li class="mr-3">
+              <a class="inline-block py-2 px-4 no-underline hover:text-pink-500" href="#products">Products</a>
+            </li>
+            <li class="mr-3">
+              <a class="inline-block py-2 px-4 no-underline hover:text-pink-500" href="#catalog">Catalog</a>
+            </li>
+            <li class="mr-3">
+              <a class="inline-block py-2 px-4 no-underline hover:text-pink-500" href="#account">Login/Register</a>
+            </li>
+            <li class="mr-3">
+              <a class="inline-block py-2 px-4 no-underline hover:text-pink-500" href="#contact">Contact</a>
+            </li>
+          </ul>
+          <button
+            id="navAction"
+            class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full mt-4 lg:mt-0 py-2 px-6 shadow opacity-75 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
+          >
+            Cart (0)
+          </button>
+        </div>
+      </div>
+      <hr class="border-b border-gray-100 opacity-25 my-0 py-0" />
+    </nav>
+    
+    <!--Hero-->
+    <div id="hero" class="pt-24 bg-gray-100">
+      <div class="container px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center">
+        <!--Left Col-->
+        <div class="flex flex-col w-full md:w-2/5 justify-center items-start text-center md:text-left">
+          <p class="uppercase tracking-loose w-full text-pink-600">Welcome to ShopSmart</p>
+          <h1 class="my-4 text-5xl font-bold leading-tight">
+            Discover Quality Products Online
+          </h1>
+          <p class="leading-normal text-2xl mb-8">
+            Shop from a curated selection of the best products. Enjoy secure checkout, fast shipping, and dedicated customer support.
+          </p>
+          <button class="mx-auto lg:mx-0 hover:underline bg-pink-600 text-white font-bold rounded-full my-6 py-4 px-8 shadow transform transition hover:scale-105 duration-300 ease-in-out">
+            Shop Now
+          </button>
+        </div>
+        <!--Right Col: Hero Image using Unsplash image #2-->
+        <div class="w-full md:w-3/5 py-6 text-center">
+          <img class="hero-img rounded-lg shadow-lg" src="https://images.unsplash.com/photo-1694599048261-a1de00f0117e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3MzQ0MzV8MHwxfHNlYXJjaHwyfHxFLWNvbW1lcmNlfGVufDB8fHx8MTc1NzA4OTQ5NXww&ixlib=rb-4.1.0&q=80&w=1080" alt="E-commerce Service Provider" />
+        </div>
+      </div>
+    </div>
+
+    <!-- Featured Products Section -->
+    <section id="products" class="bg-white border-b py-8">
+      <div class="container max-w-5xl mx-auto m-8">
+        <h2 class="w-full my-2 text-4xl font-bold leading-tight text-center text-gray-800">
+          Featured Products
+        </h2>
+        <div class="w-full mb-4">
+          <div class="h-1 mx-auto bg-pink-500 w-24 opacity-75 rounded-t"></div>
+        </div>
+        <div class="flex flex-wrap -mx-2">
+          <!-- Product Card 1 -->
+          <div class="w-full md:w-1/3 p-2">
+            <div class="bg-gray-100 rounded-lg overflow-hidden shadow">
+              <img src="https://images.unsplash.com/photo-1658297063569-162817482fb6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3MzQ0MzV8MHwxfHNlYXJjaHwzfHxFLWNvbW1lcmNlfGVufDB8fHx8MTc1NzA4OTQ5NXww&ixlib=rb-4.1.0&q=80&w=1080" alt="Shopify ecommerce platform on MacBook Air" class="feature-img" />
+              <div class="p-4">
+                <h3 class="font-bold text-xl mb-2">Modern Laptop Bag</h3>
+                <p class="text-gray-700 text-base mb-4">Starting at £49.99</p>
+                <button class="bg-pink-600 text-white font-bold py-2 px-4 rounded-full hover:bg-pink-700 transition duration-300">
+                  Buy Now
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- Product Card 2 -->
+          <div class="w-full md:w-1/3 p-2">
+            <div class="bg-gray-100 rounded-lg overflow-hidden shadow">
+              <img src="https://images.unsplash.com/photo-1449247666642-264389f5f5b1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3MzQ0MzV8MHwxfHNlYXJjaHw2fHxFLWNvbW1lcmNlfGVufDB8fHx8MTc1NzA4OTQ5NXww&ixlib=rb-4.1.0&q=80&w=1080" alt="Ships Out Today" class="feature-img" />
+              <div class="p-4">
+                <h3 class="font-bold text-xl mb-2">Wireless Headphones</h3>
+                <p class="text-gray-700 text-base mb-4">Starting at £79.99</p>
+                <button class="bg-pink-600 text-white font-bold py-2 px-4 rounded-full hover:bg-pink-700 transition duration-300">
+                  Buy Now
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- Product Card 3 -->
+          <div class="w-full md:w-1/3 p-2">
+            <div class="bg-gray-100 rounded-lg overflow-hidden shadow">
+              <img src="https://images.unsplash.com/photo-1657812159103-1b2a52a7f5e8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3MzQ0MzV8MHwxfHNlYXJjaHw0fHxFLWNvbW1lcmNlfGVufDB8fHx8MTc1NzA4OTQ5NXww&ixlib=rb-4.1.0&q=80&w=1080" alt="White and Black Sign" class="feature-img" />
+              <div class="p-4">
+                <h3 class="font-bold text-xl mb-2">Eco-friendly Watch</h3>
+                <p class="text-gray-700 text-base mb-4">Starting at £29.99</p>
+                <button class="bg-pink-600 text-white font-bold py-2 px-4 rounded-full hover:bg-pink-700 transition duration-300">
+                  Buy Now
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Product Catalog & Categories -->
+    <section id="catalog" class="bg-gray-50 border-b py-8">
+      <div class="container mx-auto px-4">
+        <h2 class="w-full my-2 text-4xl font-bold leading-tight text-center text-gray-800">
+          Shop by Category
+        </h2>
+        <div class="w-full mb-6">
+          <div class="h-1 mx-auto bg-pink-500 w-24 opacity-75 rounded-t"></div>
+        </div>
+        <div class="flex flex-wrap -mx-2">
+          <!-- Category 1 -->
+          <div class="w-full md:w-1/3 p-2 text-center">
+            <img src="https://images.unsplash.com/photo-1657812159075-7f0abd98f7b8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3MzQ0MzV8MHwxfHNlYXJjaHwxfHxFLWNvbW1lcmNlfGVufDB8fHx8MTc1NzA4OTQ5NXww&ixlib=rb-4.1.0&q=80&w=1080" alt="Fashion & Accessories" class="catalog-img mb-4 rounded-lg shadow" />
+            <h3 class="font-bold text-xl mb-2">Fashion</h3>
+            <p class="text-gray-700">Latest trends and classic styles.</p>
+          </div>
+          <!-- Category 2 -->
+          <div class="w-full md:w-1/3 p-2 text-center">
+            <img src="https://images.unsplash.com/photo-1658297063569-162817482fb6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3MzQ0MzV8MHwxfHNlYXJjaHwzfHxFLWNvbW1lcmNlfGVufDB8fHx8MTc1NzA4OTQ5NXww&ixlib=rb-4.1.0&q=80&w=1080" alt="Electronics" class="catalog-img mb-4 rounded-lg shadow" />
+            <h3 class="font-bold text-xl mb-2">Electronics</h3>
+            <p class="text-gray-700">Smart gadgets and cutting-edge tech.</p>
+          </div>
+          <!-- Category 3 -->
+          <div class="w-full md:w-1/3 p-2 text-center">
+            <img src="https://images.unsplash.com/photo-1688561807403-ba262590f86f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3MzQ0MzV8MHwxfHNlYXJjaHw1fHxFLWNvbW1lcmNlfGVufDB8fHx8MTc1NzA4OTQ5NXww&ixlib=rb-4.1.0&q=80&w=1080" alt="Home & Garden" class="catalog-img mb-4 rounded-lg shadow" />
+            <h3 class="font-bold text-xl mb-2">Home & Garden</h3>
+            <p class="text-gray-700">Decor, furniture, and more.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Secure Checkout Section -->
+    <section id="checkout" class="bg-white border-b py-8">
+      <div class="container mx-auto px-4 flex flex-wrap items-center">
+        <div class="w-full md:w-1/2 p-6">
+          <h2 class="text-4xl font-bold leading-tight text-gray-800 mb-4">
+            Secure & Fast Checkout
+          </h2>
+          <p class="text-gray-600 mb-8">
+            Our checkout process is designed with security and ease of use in mind. Enjoy peace of mind with encryption and multiple payment options.
+          </p>
+          <button class="bg-pink-600 text-white font-bold rounded-full py-3 px-8 shadow-lg hover:bg-pink-700 transform transition hover:scale-105 duration-300 ease-in-out">
+            Proceed to Checkout
+          </button>
+        </div>
+        <div class="w-full md:w-1/2 p-6 text-center">
+          <img src="https://images.unsplash.com/photo-1688561809321-e51e8a4d6651?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3MzQ0MzV8MHwxfHNlYXJjaHw3fHxFLWNvbW1lcmNlfGVufDB8fHx8MTc1NzA4OTQ5NXww&ixlib=rb-4.1.0&q=80&w=1080" alt="Secure Checkout Process" class="checkout-img rounded-lg shadow" />
+        </div>
+      </div>
+    </section>
+
+    <!-- User Account: Login / Registration Section -->
+    <section id="account" class="bg-gray-100 border-b py-8">
+      <div class="container mx-auto flex flex-wrap items-center">
+        <div class="w-full md:w-1/2 p-6 text-center">
+          <img src="https://images.unsplash.com/photo-1688561807440-8a57dfa77ee3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3MzQ0MzV8MHwxfHNlYXJjaHw4fHxFLWNvbW1lcmNlfGVufDB8fHx8MTc1NzA4OTQ5NXww&ixlib=rb-4.1.0&q=80&w=1080" alt="Manage your account" class="account-img rounded-lg shadow" />
+        </div>
+        <div class="w-full md:w-1/2 p-6">
+          <h2 class="text-4xl font-bold leading-tight text-gray-800 mb-4">
+            Account Access
+          </h2>
+          <p class="text-gray-600 mb-4">
+            Already registered? Login to view your order history and track your shipments. New here? Create an account in just a few clicks.
+          </p>
+          <div class="flex flex-wrap">
+            <a href="#" class="bg-pink-600 text-white font-bold rounded-full py-3 px-8 m-2 shadow hover:bg-pink-700 transform transition hover:scale-105 duration-300">
+              Login
+            </a>
+            <a href="#" class="bg-white text-pink-600 border border-pink-600 font-bold rounded-full py-3 px-8 m-2 shadow hover:bg-pink-600 hover:text-white transform transition hover:scale-105 duration-300">
+              Register
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="bg-white border-b py-8">
+      <div class="container mx-auto px-4">
+        <h2 class="w-full my-2 text-4xl font-bold leading-tight text-center text-gray-800">
+          Get in Touch
+        </h2>
+        <div class="w-full mb-4">
+          <div class="h-1 mx-auto bg-pink-500 w-24 opacity-75 rounded-t"></div>
+        </div>
+        <div class="flex flex-wrap items-center">
+          <div class="w-full md:w-1/2 p-6">
+            <img src="https://images.unsplash.com/photo-1688561807426-87333ae6e6c7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3MzQ0MzV8MHwxfHNlYXJjaHw5fHxFLWNvbW1lcmNlfGVufDB8fHx8MTc1NzA4OTQ5NXww&ixlib=rb-4.1.0&q=80&w=1080" alt="Contact us" class="contact-img rounded-lg shadow" />
+          </div>
+          <div class="w-full md:w-1/2 p-6">
+            <form class="w-full">
+              <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="name">
+                  Name
+                </label>
+                <input class="appearance-none border border-gray-300 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:border-pink-500" id="name" type="text" placeholder="Your Name" />
+              </div>
+              <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="email">
+                  Email
+                </label>
+                <input class="appearance-none border border-gray-300 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:border-pink-500" id="email" type="email" placeholder="you@example.com" />
+              </div>
+              <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="message">
+                  Message
+                </label>
+                <textarea class="appearance-none border border-gray-300 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:border-pink-500" id="message" rows="4" placeholder="Your message..."></textarea>
+              </div>
+              <div class="flex items-center justify-between">
+                <button class="bg-pink-600 hover:bg-pink-700 text-white font-bold py-2 px-4 rounded-full focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300" type="button">
+                  Send Message
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="container mx-auto text-center py-6 mb-12">
+      <h2 class="w-full my-2 text-4xl font-bold leading-tight text-center text-gray-800">
+        Join ShopSmart Today
+      </h2>
+      <div class="w-full mb-4">
+        <div class="h-1 mx-auto bg-pink-500 w-1/6 opacity-75 rounded-t"></div>
+      </div>
+      <h3 class="my-4 text-2xl leading-tight">
+        Sign up now for exclusive offers and a better shopping experience.
+      </h3>
+      <button class="mx-auto lg:mx-0 hover:underline bg-pink-600 text-white font-bold rounded-full my-6 py-4 px-8 shadow transform transition hover:scale-105 duration-300 ease-in-out">
+        Get Started
+      </button>
+    </section>
+
+    <!--Footer-->
+    <footer class="bg-white">
+      <div class="container mx-auto px-8">
+        <div class="w-full flex flex-col md:flex-row py-6">
+          <div class="flex-1 mb-6 text-black">
+            <a class="text-pink-600 no-underline hover:no-underline font-bold text-2xl lg:text-4xl" href="#">
+              <!-- Reusing SVG logo from header -->
+              <svg class="h-8 fill-current inline" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512.005 512.005">
+                <rect fill="#2a2a31" x="16.539" y="425.626" width="479.767" height="50.502" transform="matrix(1,0,0,1,0,0)" />
+                <path
+                  class="plane-take-off"
+                  d=" M 510.7 189.151 C 505.271 168.95 484.565 156.956 464.365 162.385 L 330.156 198.367 L 155.924 35.878 L 107.19 49.008 L 211.729 230.183 L 86.232 263.767 L 36.614 224.754 L 0 234.603 L 45.957 314.27 L 65.274 347.727 L 105.802 336.869 L 240.011 300.886 L 349.726 271.469 L 483.935 235.486 C 504.134 230.057 516.129 209.352 510.7 189.151 Z "
+                />
+              </svg>
+              ShopSmart
+            </a>
+          </div>
+          <div class="flex-1">
+            <p class="uppercase text-gray-500 md:mb-6">Links</p>
+            <ul class="list-reset mb-6">
+              <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                <a href="#faq" class="no-underline hover:underline text-gray-800 hover:text-pink-500">FAQ</a>
+              </li>
+              <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                <a href="#help" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Help</a>
+              </li>
+              <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                <a href="#support" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Support</a>
+              </li>
+            </ul>
+          </div>
+          <div class="flex-1">
+            <p class="uppercase text-gray-500 md:mb-6">Legal</p>
+            <ul class="list-reset mb-6">
+              <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                <a href="#terms" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Terms</a>
+              </li>
+              <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                <a href="#privacy" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Privacy</a>
+              </li>
+            </ul>
+          </div>
+          <div class="flex-1">
+            <p class="uppercase text-gray-500 md:mb-6">Social</p>
+            <ul class="list-reset mb-6">
+              <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                <a href="https://www.facebook.com" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Facebook</a>
+              </li>
+              <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                <a href="https://www.linkedin.com" class="no-underline hover:underline text-gray-800 hover:text-pink-500">LinkedIn</a>
+              </li>
+              <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                <a href="https://www.twitter.com" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Twitter</a>
+              </li>
+            </ul>
+          </div>
+          <div class="flex-1">
+            <p class="uppercase text-gray-500 md:mb-6">Company</p>
+            <ul class="list-reset mb-6">
+              <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                <a href="#blog" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Official Blog</a>
+              </li>
+              <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                <a href="#about" class="no-underline hover:underline text-gray-800 hover:text-pink-500">About Us</a>
+              </li>
+              <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                <a href="#contact" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <a href="https://www.freepik.com/free-photos-vectors/background" class="text-gray-500 text-xs block text-center pb-4">Background vector created by freepik - www.freepik.com</a>
+    </footer>
+    <!-- jQuery if you need it
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  -->
+    <script>
+      var scrollpos = window.scrollY;
+      var header = document.getElementById("header");
+      var navcontent = document.getElementById("nav-content");
+      var navaction = document.getElementById("navAction");
+      var toToggle = document.querySelectorAll(".toggleColour");
+
+      document.addEventListener("scroll", function () {
+        /*Apply classes for slide in bar*/
+        scrollpos = window.scrollY;
+
+        if (scrollpos > 10) {
+          header.classList.add("bg-white");
+          navaction.classList.remove("bg-white");
+          navaction.classList.add("gradient");
+          navaction.classList.remove("text-gray-800");
+          navaction.classList.add("text-white");
+          //Use to switch toggleColour colours
+          for (var i = 0; i < toToggle.length; i++) {
+            toToggle[i].classList.add("text-gray-800");
+            toToggle[i].classList.remove("text-white");
+          }
+          header.classList.add("shadow");
+          navcontent.classList.remove("bg-gray-100");
+          navcontent.classList.add("bg-white");
+        } else {
+          header.classList.remove("bg-white");
+          navaction.classList.remove("gradient");
+          navaction.classList.add("bg-white");
+          navaction.classList.remove("text-white");
+          navaction.classList.add("text-gray-800");
+          //Use to switch toggleColour colours
+          for (var i = 0; i < toToggle.length; i++) {
+            toToggle[i].classList.add("text-white");
+            toToggle[i].classList.remove("text-gray-800");
+          }
+
+          header.classList.remove("shadow");
+          navcontent.classList.remove("bg-white");
+          navcontent.classList.add("bg-gray-100");
+        }
+      });
+    </script>
+    <script>
+      /*Toggle dropdown list*/
+      /*https://gist.github.com/slavapas/593e8e50cf4cc16ac972afcbad4f70c8*/
+
+      var navMenuDiv = document.getElementById("nav-content");
+      var navMenu = document.getElementById("nav-toggle");
+
+      document.onclick = check;
+      function check(e) {
+        var target = (e && e.target) || (event && event.srcElement);
+
+        //Nav Menu
+        if (!checkParent(target, navMenuDiv)) {
+          // click NOT on the menu
+          if (checkParent(target, navMenu)) {
+            // click on the link
+            if (navMenuDiv.classList.contains("hidden")) {
+              navMenuDiv.classList.remove("hidden");
+            } else {
+              navMenuDiv.classList.add("hidden");
+            }
+          } else {
+            // click both outside link and outside menu, hide menu
+            navMenuDiv.classList.add("hidden");
+          }
+        }
+      }
+      function checkParent(t, elm) {
+        while (t.parentNode) {
+          if (t == elm) {
+            return true;
+          }
+          t = t.parentNode;
+        }
+        return false;
+      }
+    </script>
+  </body>
+</html>
